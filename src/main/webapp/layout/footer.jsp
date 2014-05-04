@@ -1,11 +1,11 @@
-<html lang="en">
+<%@ page language="java" contentType="text/html; charset=US-ASCII"
+    pageEncoding="US-ASCII"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
 <head>
-<meta charset="utf-8">
-<title>Url</title>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script
-	src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
 <link href="bootstrap/bootstrap.min.css" rel="stylesheet" media="screen"
 	type="text/css">
 <link href="bootstrap/bootstrap.css" rel="stylesheet" media="screen"
@@ -14,6 +14,8 @@
 	media="screen" type="text/css">
 <link href="bootstrap/bootstrap-responsive.min.css" rel="stylesheet"
 	media="screen" type="text/css">
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script type="text/javascript" src="jsbootstrap/bootstrap.js" /></script>
 <script type="text/javascript" src="jsbootstrap/bootstrap.min.js" /></script>
 <script type="text/javascript" src="jsbootstrap/bootstrap-dropdown.js" /></script>
@@ -24,49 +26,26 @@
 <script type="text/javascript" src="jsbootstrap/bootstrap-modal.js" /></script>
 
 
-<script type="text/javascript">
-	function submiturl() {
-
-		alert('inside submiturl');
-
-		var url = $('#url').val();
-
-		alert('url: ' + url);
-
-		$.ajax({
-			url : "tackit/user/url",
-			type : "POST",
-			data : "url=" + url,
-
-			success : function(data, textStatus, jqXHR) {
-				alert('success');
-				window.location.href="signup.jsp";
-			},
-			error : function(jqXHR, textStatus, errorThrown) {
-				alert('Could not process request.. ' + errorThrown);
-			}
-		});
-	}
-</script>
-
-
 
 
 </head>
-
 <body>
 
 
-
-
-
-			<label>Add your pins here...!!</label> <input type="text" id="url"
-				placeholder="http://">
-			<button type="submit" id="submiturl" class="btn btn-primary"
-				onclick="submiturl()">Submit</button>
-	
-
-
-
+<div id="footer">
+		<div class="navbar navbar-inverse navbar-fixed-bottom">
+			<div class="navbar-inner" style="min-height: 70px;">
+				<div style="margin: 10px 5px 10px 5px; float: left;">
+					<span style="color: white;">Copyright &copy; Tack!T</span>
+				</div>
+				<div style="margin: 10px 10px 10px 10px; float: right;">
+					<a href="about.htm" style="color: white;">About Us</a> <span
+						style="color: white;">|</span> <a data-toggle="modal" href="#" style="color: white;">Contact
+						Us</a> <span
+						style="color: white;">|</span><a data-toggle="modal" href="#" style="color: white;">Careers</a>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
